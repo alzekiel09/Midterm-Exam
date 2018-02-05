@@ -9,6 +9,7 @@ import { map } from 'rxjs/operators';
 
 interface NewNote {
   content: string;
+  name: string;
   hearts: 0;
   time: number;
 }
@@ -44,6 +45,7 @@ export class NoteService {
   create(content: string) {
     const note = {
       content,
+	  name,
       hearts: 0,
       time: new Date().getTime(),
     };
